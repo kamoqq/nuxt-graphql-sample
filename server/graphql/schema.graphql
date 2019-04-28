@@ -1,0 +1,22 @@
+type Query {
+  releases(org: String!, repo: String!): Releases!
+  tags(org: String!, repo: String!): Tags!
+}
+
+type Releases {
+  title: String!
+  link: String!
+  items: [Item]!
+}
+
+type Tags {
+  title: String!
+  link: String!
+  items: [Item]!
+}
+
+type Item {
+  title: String!
+  link: String!
+  pubDate: String!
+}
